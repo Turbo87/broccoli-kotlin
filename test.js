@@ -10,6 +10,8 @@ const Kotlin2JS = require('.');
 describe('Kotlin2JS', () => {
   let input, output;
 
+  jest.setTimeout(10000);
+
   beforeEach(co.wrap(function* () {
     input = yield createTempDir();
   }));
