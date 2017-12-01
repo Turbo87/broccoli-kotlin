@@ -10,7 +10,7 @@ class Kotlin2JS extends Plugin {
   }
 
   build() {
-    const { outputFile, sourceMaps, metaInfo } = this.options;
+    const { outputFile, sourceMaps, metaInfo, moduleKind } = this.options;
 
     if (!outputFile) {
       throw new Error('Please specify an `outputFile` option');
@@ -21,6 +21,7 @@ class Kotlin2JS extends Plugin {
       sources: this.inputPaths,
       sourceMaps,
       metaInfo,
+      moduleKind,
     });
   }
 }
