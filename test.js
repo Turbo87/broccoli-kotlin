@@ -45,4 +45,17 @@ describe('Kotlin2JS', () => {
 
     expect(Object.keys(output.read())).toContain('sample-library.js.map');
   }));
+
+  it('add metadata file when `metaInfo` option is used', co.wrap(function* () {
+    output = createBuilder(new Kotlin2JS(input.path(), {
+      outputFile: 'sample-library.js',
+      metaInfo: true,
+    }));
+
+    input.copy(`${__dirname}/fixtures/cli-example/`);
+
+    yield output.build();
+
+    expect(output.read()).toMatchSnapshot();
+  }));
 });
