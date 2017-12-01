@@ -1,6 +1,6 @@
 {
   "name": "broccoli-kotlin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Broccoli plugin converting Kotlin code to JavaScript",
   "license": "MIT",
   "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
