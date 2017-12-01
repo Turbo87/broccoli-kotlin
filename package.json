@@ -5,5 +5,8 @@
   "license": "MIT",
   "author": "Tobias Bieniek <tobias.bieniek@gmail.com>",
   "main": "index.js",
-  "repository": "git@github.com:Turbo87/broccoli-kotlin.git"
+  "repository": "git@github.com:Turbo87/broccoli-kotlin.git",
+  "dependencies": {
+    "@jetbrains/kotlinc-js-api": "^1.2.2"
+  }
 }
