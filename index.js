@@ -17,7 +17,7 @@ class Kotlin2JS extends Plugin {
     }
 
     return kotlinCompiler.compile({
-      output: path.join(this.outputPath, outputFile),
+      output: path.resolve(this.outputPath, outputFile),
       sources: this.inputPaths,
       sourceMaps,
       metaInfo,
