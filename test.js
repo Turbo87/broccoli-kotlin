@@ -32,4 +32,17 @@ describe('Kotlin2JS', () => {
 
     expect(output.read()).toMatchSnapshot();
   }));
+
+  it('enables sourcemaps when `sourceMaps` option is used', co.wrap(function* () {
+    output = createBuilder(new Kotlin2JS(input.path(), {
+      outputFile: 'sample-library.js',
+      sourceMaps: true,
+    }));
+
+    input.copy(`${__dirname}/fixtures/cli-example/`);
+
+    yield output.build();
+
+    expect(Object.keys(output.read())).toContain('sample-library.js.map');
+  }));
 });
